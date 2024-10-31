@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Griffin Tech Production Schedule</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="shortcut icon" href="./image/download (1).jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body  style="background-color: hsl(0, 100%, 99%);">
+    <!-- <div id="dateDisplay"></div>
+    <button id="updateButton" onclick="updateDate()">Update Date</button> -->
+
+<div class="container text-white ">
+
+    <!-- Header -->
+     <div class="header1_Title d-flex justify-content-between mt-3 ">
+
+        <div class="header1 d-flex gap-2 ">
+            <div class="image ">
+                <img style="width: 40px; border-radius: 50%;" src="./image/download (1).jpeg" alt="">
+            </div>
+           
+            
+        </div>
+
+                            <div class="header2">
+                                <h6 class="daily" style="font-weight: bold;">E-DAILY PRODUCTION SCHEDULE</h6>
+                            </div>
+
+                                    <div class="header3 fw-bold">
+                                        <p id="supervisor" >SUPERVISOR: </p>
+                                    </div>
+
+
+     </div>
+
+
+        <!-- for the Header2 -->
+            <div class="header2_Title d-flex justify-content-between">
+
+                        <div class="header2-1 d-flex gap-2 ">
+                                    <div class="date fw-bold">
+                                        <p id="num" >LINE #:</p>
+                                    </div>             
+                        </div>
+                        
+                            <div class="header2-2">
+                                <h6 class="E-work" style="margin-left: 40px;font-weight: bold;" >E-WORK SHEET / E-WORK TRAVELER</h6>
+                            </div>
+                        
+                                    <!-- for the updated date -->
+                                    <div class="time d-flex gap-2 fw-bold">
+                                        <p  class="none" >DATE:</p>
+                                        <span id="day" >00</span>
+                                        <span>-</span> 
+                                        <span id="month" >00</span>
+                                        <span>-</span>
+                                        <span id="year" >0000</span>
+                                    </div> 
+                        
+                        
+            </div>
+
+        </div>
+
+    <!-- Here begins the form section-->
+        <div style="width: 95%; margin: auto;" class="container-fluid mt-4">
+            <form id="productionForm">
+                <div class="form-row">
+                    <div class="form-group col-md-1">
+                        <label for="number">No.</label>
+                        <input type="number" class="form-control" required id="number">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="companyName">Company Name:</label>
+                        <input type="text" class="form-control" required id="companyName">
+                    </div>
+                    <div class="form-group col-md-1">
+                        <label for="companyName">Part No.</label>
+                        <input type="number" class="form-control" required id="partNo">
+                    </div>
+                    <div class="form-group col-md-1">
+                        <label for="companyName"># of people:</label>
+                        <input type="number" class="form-control" required id="noofPeople">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="starttime">Start Time:</label>
+                        <input type="time" class="form-control" required id="starttime">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="stopTime">Stop Time:</label>
+                        <input type="time" class="form-control" required id="stopTime">
+                    </div>
+                    <div class="form-group col-md-1">
+                        <label for="quantitypacked">Qty Packed:</label>
+                        <input type="number" class="form-control" required id="quantityPacked">
+                    </div>
+                    <div class="form-group col-md-1">
+                        <label for="paintNo">Paint No.</label>
+                        <input type="number" class="form-control" required id="paintNo">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="typeOfPowder">Type Of Powder:</label>
+                        <input type="text" class="form-control" required id="typeOfPowder">
+                    </div>
+                    <div class="form-group col-md-1">
+                        <label for="quantityUsed">Qty Used:</label>
+                        <input type="number" class="form-control" required id="quantityUsed">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="balPowder">Bal Powder:</label>
+                        <input type="text" class="form-control" required id="balPowder">
+                    </div>
+                    <div class="form-group col-md-1">
+                        <label for="temperature">Temperature:</label>
+                        <input type="number" class="form-control" required id="temperature">
+                    </div>
+                    <div class="form-group col-md-1">
+                        <label for="lineSpeed">Line Speed:</label>
+                        <input type="number" class="form-control" required id="lineSpeed">
+                    </div>
+                    <div class="form-group col-md-1">
+                        <label for="thickAverageMin">Thickness Avg(Min):</label>
+                        <input type="number" class="form-control" required id="thickAverageMin">
+                    </div>
+                    <div class="form-group col-md-1">
+                        <label for="thickAverageMax">Thickness Avg(Max):</label>
+                        <input type="number" class="form-control" required id="thickAverageMax">
+                    </div>
+                    <div class="form-group col-md-1">
+                        <label for="partNo1">P. O. #:</label>
+                        <input type="number" class="form-control" required id="partNo1">
+                    </div>
+              
+                    <div class="form-group col-md-2">
+                        <label for="comment">comment:</label>
+                        <textarea name="" class="form-control" id="comment"></textarea>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="inspection">Inspection:</label>
+                        <input type="text" class="form-control" required id="inspection">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="inspector">Inspector:</label>
+                        <input type="text" class="form-control" required id="inspector">
+                    </div>
+                </div>
+
+                <!-- For the submit Button -->
+                 
+    <div class="btn" style="display: flex; ">
+        <div class="btn-group me-2" role="group" aria-label="First group">
+            <button style="color:#003471; background-color: white; font-weight: bold;" type="button" onclick="btn()" class="btn btn-primary">Header</button>
+        </div>
+        <button style="color:#003471; background-color: white; font-weight: bold;" type="submit" class="btn btn-primary">Add Entry</button>
+        </div>
+    </form>
+
+
+<!-- For the Table Section -->
+    <table style="width: 90%; margin: auto;" class="table custom-table mt-5" >
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Company Name</th>
+                <th>PART NO.</th>
+                <th># OF PEOPLE</th>
+                <th>START TIME</th>
+                <th>STOP TIME</th>
+                <th>QTY PACKED</th>
+                <th>PAINT LOT / B. #</th>
+                <th>TYPE OF POWDER</th>
+                <th>QTY USED</th>
+                <th>BAL POWDER</th>
+                <th>TEMP</th>
+                <th>LINE SPEED</th>
+                <th>THICKNESS AVG MIN</th>
+                <th>THICKNESS AVG MAX</th>
+                <th>P. O. #</th>
+                <th>COMMENT</th>
+                <th>INSPECTION</th>
+                <th>INSPECTOR</th>
+            </tr>
+        </thead>
+        <tbody id="productionTable" ></tbody>
+    </table>
+
+</div>
+
+<br>
+   <!-- This is the Footer Section -->
+   <div style="width: 95%; margin: auto;" class="Last-Footer">
+    <!-- Footer -->
+ <div class="footer">
+             <!-- For the Painters -->
+           
+             <div class="list1">
+                 <p style="font-weight: bold;">Painters: </p>
+                         <ol>
+                             <li id="list1" ></li>
+                             <li id="list2" ></li>
+                             <li id="list3" ></li>
+                         </ol>
+             </div>
+
+                 <!-- For the Hangers -->
+                  <div class="list2">
+                     <p style="font-weight: bold;">Hangers:</p>
+                             <ol>
+                                 <li id="settle1" ></li>
+                                 <li id="settle2" ></li>
+                                 <li id="settle3" ></li>
+                             </ol>
+                 </div>
+                             
+             <!-- For the Packers -->
+              <div class="list3">
+                 <p style="font-weight: bold;" >Packers:</p>
+                     <ol>
+                         <li id="middle1" ></li>
+                         <li id="middle2" ></li>
+                         <li id="middle3" ></li>
+                     </ol>
+             </div>
+ </div>
+
+
+
+
+ <!-- For the Inspection -->
+     <div class="Final-Inspection">
+         <p id="collins1" style="font-weight: bold;" >Final Inspection Status:  </p>
+         <p id="collins2" class="qty" style="font-weight: bold;" >Accepted Qty:  </p>
+         <p id="collins3" style="font-weight: bold;" >Daily Check:  </p>
+     </div>
+
+<!-- For the Inspector -->
+<div class="Inspector">
+ <p id="griffin1" style="font-weight: bold;" >Inspector:  </p>
+ <p id="griffin2" style="font-weight: bold;" >Rejected Qty:  </p>
+ <p id="griffin3" style="font-weight: bold;" >Wash Tank Oil:  </p>
+</div>
+
+ <!-- For the Box -->
+     <div class="box d-flex justify-content-between">
+         <p id="packing" style="font-weight: bold;" >Packing Slip Numbers: </p>
+         <p id="packing1" style="font-weight: bold;" >Line Leader:</p>
+     </div>
+
+</div>  
+
+    <!-- For the Button -->
+<div class="btn" style="display: flex;">
+    <!-- <div class="btn-group me-2" role="group" aria-label="First group">
+        <button style="color:#003471; background-color: white; font-weight: bold;" type="button" onclick="btn()" class="btn btn-primary">GRIFFIN</button>
+    </div> -->
+
+    <div style="margin-left: 25px; margin-top: 5px;" class="btn-group me-2" role="group" aria-label="Second group">
+        <button style="color: white; background-color: #003471; font-weight: bold;" onclick="btn1()" type="button" class="btn btn-primary">SUM</button>
+        <button style="color: red; background-color: white; font-weight: bold;" onclick="window.print()"  type="button" class="btn btn-primary">PRINT</button>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="./index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
